@@ -1,0 +1,75 @@
+@import "variables";
+
+.hero-wrapper {
+    height: 100vh;
+    background: #2B5CD5;
+    background: linear-gradient(180deg, #2B5CD5, #FFFFFF);
+    color: white;
+    padding: calc(#{$baseline}*2) 0;
+
+    @media (max-width: 900px) {
+        height: auto;
+    }
+}
+
+.wrapper-content {
+    display: flex;
+    gap: calc(#{$baseline}*5);
+    margin-bottom: 0;
+}
+
+.wrapper-content-collum {
+    display: flex;
+    gap: calc(#{$baseline}*5);
+    flex-direction: column;
+}
+
+.wrapper-image {
+    position: relative; /* Added for positioning the pseudo-element */
+  
+}
+
+.hero-image {
+    height: 70vh;
+    display: block;
+    @media (max-width: 450px) {
+        height: 55vh;
+    }
+}
+
+.wrapper-image::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10%;
+    background: linear-gradient(to bottom, rgba(132, 26, 177, 0) 0%, rgba(255, 255, 255, 0.74) 100%);
+    pointer-events: none;
+}
+
+.wrapper-content-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.wrapper-content-text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#header-paragraph {
+    color: black;
+}
+
+.booking-image {
+    width: 400px;
+    @media (max-width: 450px) {
+        width: 35vh;
+    }
+}

@@ -1,0 +1,84 @@
+@import "variables";
+
+.card {
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: calc(#{$baseline}*1);
+}
+
+.wrapper-content-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @media (max-width: 1360px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.card-content {
+    height: auto;
+    width: 30vw;
+    text-align: center;
+    @media (max-width: 1360px) {
+        width: 100%;
+        margin-bottom: calc(#{$baseline}*2);
+    }
+}
+
+.card-label {
+    border-radius: 50px 50px 0 0;
+    background: #2B5CD5;
+    background: linear-gradient(180deg, #2B5CD5, #31318b);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    h3{
+        margin: 0;
+        color: white;
+    }
+}
+
+.wrapper-content-numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-content-text {
+    padding: 20px;
+    border: 3px solid $accentColor;
+    border-radius: 0 0 50px 50px;
+    border-top: none;
+    height: 350px;
+    text-align: center;
+    @media (max-width: 1360px) {
+        height: auto;
+    }
+}
+
+#circle {
+    border: 3px solid $accentColor;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 80px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        margin: 0;
+    }
+    margin-bottom: calc(#{$baseline}*1);
+    
+}
